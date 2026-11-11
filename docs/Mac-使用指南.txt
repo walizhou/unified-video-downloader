@@ -19,4 +19,6 @@ DouK-Downloader：https://github.com/JoeanAmier/TikTokDownloader/releases
 yt-dlp：https://github.com/yt-dlp/yt-dlp/releases
 Get cookies.txt LOCALLY：https://chromewebstore.google.com/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc
 
+Mac 测试版首次打开：此版尚未经过 Apple Developer ID 公证。请只从本项目 GitHub Releases 下载，并核对 SHA-256。若 macOS 拦截：先尝试打开一次，再到“系统设置 → 隐私与安全性”底部点击“仍要打开”，最后再次确认。Apple 说明：https://support.apple.com/zh-cn/102445 。无需关闭系统安全保护。
+
 测试记录（2026-11-11）：抖音示例链接已转换为 /video/ 作品链接，在这台 Mac 上通过 DouK 5.8 下载得到约 64 MB 的 MP4，直接进入测试文件夹；DouK 报告下载 1 个、跳过 0 个。用户提供的 B站链接 BV1orW46aEba 已通过 yt-dlp 加随包 FFmpeg 下载并合并成单个约 5.9 MB 的 MP4，检查含视频和音频流。小红书链接 6ac9a08e0000000013018d85 已通过应用内置 yt-dlp 参数下载成约 16.3 MiB 的单个 MP4，直接进入指定文件夹；检查可完整解码，含视频和音频流。
