@@ -1,0 +1,12 @@
+视频下载器 Mac 版组件与源码说明
+
+本应用的原生界面源码：macos/App.swift。使用 Apple Swift 5.8、AppKit 构建。项目自有源码采用 GPL-3.0-or-later，完整文本见 LICENSE。
+
+内置命令行组件：
+1. DouK-Downloader 5.8 macOS ARM64（抖音），项目：https://github.com/JoeanAmier/TikTokDownloader ，发布包：https://github.com/JoeanAmier/TikTokDownloader/releases/tag/5.8 ，GNU GPL v3。发布压缩包 SHA-256：e989a85dee260c606c5a048be0fb8d34dbbff38969cdf99c3bedd9764ec5a28c。
+2. yt-dlp 2026.10.26 macOS 版（B站、小红书），项目：https://github.com/yt-dlp/yt-dlp ，发布页：https://github.com/yt-dlp/yt-dlp/releases/tag/2026.10.26 。可执行文件 SHA-256：0f922c15ccc0b83eefa1c8bc9104e434318c4bf16e408e1ee93b7745a6efe0aa。yt-dlp 项目本身使用 Unlicense；其发布文件可能包含另有许可证的依赖。
+3. FFmpeg 9.0.2 macOS ARM64 静态版（音视频合并），构建者：https://ffmpeg.martin-riedl.de/ ，FFmpeg 源码：https://ffmpeg.org/ ，该构建启用 GNU GPL v3。构建者发布压缩包 SHA-256：c8ed4c4e6978a03c485edbfe4e0a5dc2380f8a30bba5150531b31b094492d924。
+
+应用将上述工具作为独立进程运行。各组件的源码、完整许可证及依赖说明，请查阅其项目页面。DouK 包内的 frozen_application_license.txt 也随程序保留。
+
+个人 Cookie、DouK 运行配置、下载记录和下载的视频都不包含在分享包中。Cookie 导入后只保存在当前 Mac 用户的私有数据目录；DouK 运行结束后会清空运行配置中的 Cookie。
