@@ -1,7 +1,7 @@
 视频下载器 Windows 版使用指南
 
-1. 从 GitHub Releases 下载 VideoDownloader-Windows-x64.zip。右键压缩包，选择“全部解压”。请保留解压后的整个文件夹，不要单独移动“视频下载器.exe”。
-2. 双击“视频下载器.exe”。粘贴一个抖音、小红书或 B站视频链接，选择保存文件夹，然后点击“开始下载”。下载完成后可点击“打开文件”或“打开文件夹”。
+1. 从 GitHub Releases 下载 VideoDownloader-Windows-x64.zip。右键压缩包，选择“全部解压”。请保留解压后的整个文件夹，不要单独移动“VideoDownloader.exe”。
+2. 双击“VideoDownloader.exe”。粘贴一个抖音、小红书或 B站视频链接，选择保存文件夹，然后点击“开始下载”。下载完成后可点击“打开文件”或“打开文件夹”。
 3. 抖音首次使用：点击“抖音首次设置”，按窗口四步操作。先在 Chrome 登录抖音；打开扩展下载页面并安装 Get cookies.txt LOCALLY；在抖音网页导出 Netscape 格式 cookies.txt；回到下载器点击“自动查找文件”，找不到就点“手动选择 cookies.txt”。无需自己把 Cookie 放进程序文件夹。
 4. 如果抖音提示 403 或登录失效，请重新导出并导入 Cookie。Cookie 相当于账号凭证，不要上传到 GitHub 或发送给别人。
 5. 如果某个平台下载失败，先确认链接能在浏览器打开，再看窗口下方日志。发布包已随附 ffmpeg.exe 和 ffprobe.exe，无需自己安装 FFmpeg。
