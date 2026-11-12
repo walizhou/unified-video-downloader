@@ -1,0 +1,9 @@
+视频下载器 Windows 版组件来源
+
+本项目自有 C# WinForms 源码：windows/UnifiedDownloader.cs，GPL-3.0-or-later，完整许可证见 LICENSE。
+
+1. DouK-Downloader V5.8 Windows x64，官方项目：https://github.com/JoeanAmier/TikTokDownloader ，发布页：https://github.com/JoeanAmier/TikTokDownloader/releases/tag/5.8 ，SHA-256 c96342ef1256b708b26ab742cac2e6f29aed78e40c82d52098af01737951910c。DouK 的 frozen_application_license.txt 随包保留。
+2. yt-dlp 2026.10.26 Windows exe，官方项目：https://github.com/yt-dlp/yt-dlp ，发布页：https://github.com/yt-dlp/yt-dlp/releases/tag/2026.10.26 ，SHA-256 f5389d3698ecde4ef06f4e6b1ce0294fe9ac1396228c8990b8d3416d6d177a7d。项目使用 Unlicense，发布文件可能包含另有许可证的依赖。
+3. FFmpeg 9.0.2 Windows essentials 构建，FFmpeg 官方下载页：https://ffmpeg.org/download.html ，构建者：https://www.gyan.dev/ffmpeg/builds/ ，构建 ZIP SHA-256 60f467265b1e312373dbcd92200c2618a74850f98d3d078e94296bb3fa2047ba。FFmpeg 项目及其组件遵守各自许可证，源码：https://ffmpeg.org/ 。
+
+应用将这些工具作为独立进程运行。发布包不应包含用户 Cookie、下载记录或下载的视频。
