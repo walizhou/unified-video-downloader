@@ -11,7 +11,7 @@
 | 系统 | 下载文件 | 使用方法 |
 | --- | --- | --- |
 | Apple 芯片 Mac（macOS 13+） | `VideoDownloader-macOS-AppleSilicon.zip` | 解压后把 `.app` 放进“应用程序”，双击打开。 |
-| Windows 10/11 x64 | `VideoDownloader-Windows-x64.zip` | 完整解压，再双击文件夹中的 `视频下载器.exe`。不要只复制 EXE。 |
+| Windows 10/11 x64 | `VideoDownloader-Windows-x64.zip` | 完整解压，再双击文件夹中的 `VideoDownloader.exe`。不要只复制 EXE。 |
 
 不要使用 GitHub 绿色 **Code → Download ZIP** 当作安装包；那是源码。下载器应随包包含 DouK、yt-dlp，以及用于合并音视频的 FFmpeg。抖音 Cookie 由每位用户在自己电脑上导出并在应用的“抖音首次设置”中导入，发布包不包含 Cookie。
 
