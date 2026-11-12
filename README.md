@@ -20,7 +20,7 @@
 ## 开发者
 
 - Mac 界面源码：[`macos/App.swift`](macos/App.swift)（AppKit）。
-- Windows 界面源码：[`windows/UnifiedDownloader.cs`](windows/UnifiedDownloader.cs)（WinForms）；[Windows 打包说明](windows/README.md)。
+- Windows 界面源码：[`windows/UnifiedDownloader.cs`](windows/UnifiedDownloader.cs)（WinForms）；[Windows 打包说明](windows/README.md)。维护者可在 Windows 上双击 `在Windows上打包.bat`。
 - 第三方组件及版本：[THIRD_PARTY.txt](docs/THIRD_PARTY.txt)。
 - 发布前检查：[RELEASE_CHECKLIST.md](docs/RELEASE_CHECKLIST.md)。
 
