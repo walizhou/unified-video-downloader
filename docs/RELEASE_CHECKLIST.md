@@ -2,8 +2,9 @@
 
 ## 必须完成
 
-- [ ] 从 Windows 电脑取回 `UnifiedDownloader.cs` 和 `.csproj`，保存到仓库，检查并移除任何 Cookie、账户信息、绝对个人路径。
-- [ ] 在 Windows 版调用 yt-dlp 时显式指定随包 `ffmpeg.exe` 的位置；随包包含 `ffprobe.exe`，并在 Windows 10/11 x64 上重测 B站和小红书，确认生成单个含音视频文件。
+- [x] 从 Windows 电脑取回 `UnifiedDownloader.cs`，保存到仓库，检查并移除任何 Cookie、账户信息、绝对个人路径（原项目没有 `.csproj`）。
+- [x] Windows 源码调用 yt-dlp 时显式指定随包 FFmpeg 目录；打包脚本包含 `ffmpeg.exe` 与 `ffprobe.exe`。
+- [ ] 在 Windows 10/11 x64 上编译并重测 B站和小红书，确认生成单个含音视频文件。
 - [x] 在 Mac 上补测小红书公开单视频链接，确认视频和音频可解码。
 - [ ] 复核窗口内的取消、重试、打开文件与打开文件夹。
 - [x] 项目源码采用 GPL-3.0-or-later，加入 `LICENSE`；保留第三方许可证、来源、版本与校验信息。
