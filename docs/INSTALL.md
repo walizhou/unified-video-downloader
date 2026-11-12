@@ -14,7 +14,7 @@
 2. 右键 ZIP 选择“全部解压”。不要在 ZIP 预览窗口中运行，也不要只复制 EXE。
 3. 双击解压文件夹内的 `视频下载器.exe`。粘贴链接、选保存文件夹、点“开始下载”。
 
-正式 Windows 包应把 `yt-dlp.exe`、`DouK/`、`ffmpeg.exe` 与 `ffprobe.exe` 等所需文件一起打包，并在 Windows 10/11 实测音视频合并。当前旧 Windows 包缺 FFmpeg，因此尚不能作为正式版提供。
+正式 Windows 包应把 `yt-dlp.exe`、`DouK/`、`ffmpeg.exe` 与 `ffprobe.exe` 等所需文件一起打包，并在 Windows 10/11 实测音视频合并。旧 Windows 包缺 FFmpeg。修订后的源码和构建脚本已准备好，待 Windows 实机编译与测试后再发布安装包。
 
 ## 抖音首次设置（两个系统相同）
 
