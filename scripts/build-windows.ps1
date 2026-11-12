@@ -34,6 +34,8 @@ foreach ($name in @('app-icon.ico','app-icon.png')) { Copy-Item -LiteralPath (Jo
 Copy-Item (Join-Path $project 'docs\Windows-使用指南.txt') (Join-Path $stage '先看使用指南.txt')
 Copy-Item -LiteralPath (Join-Path $project 'LICENSE') -Destination $stage
 Copy-Item -LiteralPath (Join-Path $project 'windows\THIRD_PARTY.txt') -Destination $stage
+$ffmpegLicense = Get-ChildItem $ffmpegWork -Filter LICENSE -Recurse | Select-Object -First 1
+if ($ffmpegLicense) { Copy-Item -LiteralPath $ffmpegLicense.FullName -Destination (Join-Path $stage 'FFmpeg-LICENSE.txt') }
 
 $csc = Join-Path $env:WINDIR 'Microsoft.NET\Framework64\v4.0.30319\csc.exe'
 if (-not (Test-Path $csc)) { $csc = Join-Path $env:WINDIR 'Microsoft.NET\Framework\v4.0.30319\csc.exe' }
