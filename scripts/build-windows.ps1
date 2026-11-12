@@ -31,7 +31,7 @@ $ffprobe = Get-ChildItem $ffmpegWork -Filter ffprobe.exe -Recurse | Select-Objec
 if (-not $ffmpeg -or -not $ffprobe) { throw 'FFmpeg archive missing ffmpeg.exe or ffprobe.exe' }
 foreach ($path in @($ffmpeg.FullName,$ffprobe.FullName,$ytDlp)) { Copy-Item -LiteralPath $path -Destination $stage }
 foreach ($name in @('app-icon.ico','app-icon.png')) { Copy-Item -LiteralPath (Join-Path $project ('windows\' + $name)) -Destination $stage }
-Copy-Item (Join-Path $project 'docs\Windows-使用指南.txt') (Join-Path $stage '先看使用指南.txt')
+Copy-Item (Join-Path $project 'docs\Windows-User-Guide.txt') (Join-Path $stage 'README-Windows.txt')
 Copy-Item -LiteralPath (Join-Path $project 'LICENSE') -Destination $stage
 Copy-Item -LiteralPath (Join-Path $project 'windows\UnifiedDownloader.cs') -Destination $stage
 Copy-Item -LiteralPath (Join-Path $project 'windows\THIRD_PARTY.txt') -Destination $stage
@@ -41,9 +41,9 @@ if ($ffmpegLicense) { Copy-Item -LiteralPath $ffmpegLicense.FullName -Destinatio
 $csc = Join-Path $env:WINDIR 'Microsoft.NET\Framework64\v4.0.30319\csc.exe'
 if (-not (Test-Path $csc)) { $csc = Join-Path $env:WINDIR 'Microsoft.NET\Framework\v4.0.30319\csc.exe' }
 if (-not (Test-Path $csc)) { throw 'Windows .NET Framework 4.x csc.exe not found' }
-$outArg = '/out:' + (Join-Path $stage '视频下载器.exe')
+$outArg = '/out:' + (Join-Path $stage 'VideoDownloader.exe')
 $iconArg = '/win32icon:' + (Join-Path $project 'windows\app-icon.ico')
-& $csc /nologo /target:winexe $outArg $iconArg /r:System.Windows.Forms.dll /r:System.Drawing.dll /r:System.Web.Extensions.dll (Join-Path $project 'windows\UnifiedDownloader.cs')
+& $csc /nologo /codepage:65001 /target:winexe $outArg $iconArg /r:System.Windows.Forms.dll /r:System.Drawing.dll /r:System.Web.Extensions.dll (Join-Path $project 'windows\UnifiedDownloader.cs')
 if ($LASTEXITCODE -ne 0) { throw 'C# compilation failed' }
 $zip = Join-Path $dist 'VideoDownloader-Windows-x64.zip'
 if (Test-Path $zip) { Remove-Item $zip -Force }
