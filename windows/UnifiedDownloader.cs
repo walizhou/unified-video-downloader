@@ -191,5 +191,10 @@ class UnifiedDownloader : Form {
         if(first){p.StandardInput.WriteLine("1");p.StandardInput.WriteLine("YES");}
         p.StandardInput.WriteLine("5");p.StandardInput.WriteLine("2");p.StandardInput.WriteLine("1");p.StandardInput.WriteLine(link);p.StandardInput.WriteLine("Q");p.StandardInput.Close();
     }
+    protected override void OnFormClosing(FormClosingEventArgs e){
+        try{if(activeProcess!=null&&!activeProcess.HasExited)activeProcess.Kill();}catch{}
+        ClearDouKCookie();
+        base.OnFormClosing(e);
+    }
     [STAThread]static void Main(){Application.EnableVisualStyles();Application.Run(new UnifiedDownloader());}
 }
