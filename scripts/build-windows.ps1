@@ -8,7 +8,7 @@ $dist = Join-Path $project 'dist'
 New-Item -ItemType Directory -Force -Path $vendor,$dist | Out-Null
 
 function Get-CheckedFile([string]$Url,[string]$Path,[string]$Expected) {
-    if (-not (Test-Path $Path)) { Invoke-WebRequest -Uri $Url -OutFile $Path }
+    if (-not (Test-Path $Path)) { Invoke-WebRequest -UseBasicParsing -Uri $Url -OutFile $Path }
     $actual = (Get-FileHash -Algorithm SHA256 $Path).Hash.ToLowerInvariant()
     if ($actual -ne $Expected) { throw "SHA-256 mismatch: $Path ($actual)" }
 }
@@ -33,6 +33,7 @@ foreach ($path in @($ffmpeg.FullName,$ffprobe.FullName,$ytDlp)) { Copy-Item -Lit
 foreach ($name in @('app-icon.ico','app-icon.png')) { Copy-Item -LiteralPath (Join-Path $project ('windows\' + $name)) -Destination $stage }
 Copy-Item (Join-Path $project 'docs\Windows-使用指南.txt') (Join-Path $stage '先看使用指南.txt')
 Copy-Item -LiteralPath (Join-Path $project 'LICENSE') -Destination $stage
+Copy-Item -LiteralPath (Join-Path $project 'windows\UnifiedDownloader.cs') -Destination $stage
 Copy-Item -LiteralPath (Join-Path $project 'windows\THIRD_PARTY.txt') -Destination $stage
 $ffmpegLicense = Get-ChildItem $ffmpegWork -Filter LICENSE -Recurse | Select-Object -First 1
 if ($ffmpegLicense) { Copy-Item -LiteralPath $ffmpegLicense.FullName -Destination (Join-Path $stage 'FFmpeg-LICENSE.txt') }
