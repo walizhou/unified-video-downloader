@@ -2,7 +2,7 @@
 
 一个窗口下载抖音、小红书和 B站视频。Mac 与 Windows 使用相近的界面和四步抖音首次设置，各平台分别打包运行组件；用户无需安装 Python 或运行命令行。
 
-> 发布状态：Mac 版已在 Apple 芯片 Mac 上实测抖音、小红书和 B站，作为测试版提供。Windows 源码尚未从原电脑取回，现有 Windows ZIP 缺 FFmpeg，因此暂不发布 Windows 包。Mac 包目前仅做临时签名，未使用 Developer ID 公证；其他 Mac 的首次打开可能被系统拦截。
+> 发布状态：Mac 版已在 Apple 芯片 Mac 上实测抖音、小红书和 B站，作为测试版提供。Windows 源码已收录并补上 FFmpeg 调用，但修订后的 EXE 尚未在 Windows 上编译和实测，因此暂不发布 Windows 包。Mac 包目前仅做临时签名，未使用 Developer ID 公证；其他 Mac 的首次打开可能被系统拦截。
 
 ## 普通用户从哪里下载
 
@@ -20,7 +20,7 @@
 ## 开发者
 
 - Mac 界面源码：[`macos/App.swift`](macos/App.swift)（AppKit）。
-- Windows 界面源码：等待从原 Windows 电脑取回 `UnifiedDownloader.cs` 和项目文件。
+- Windows 界面源码：[`windows/UnifiedDownloader.cs`](windows/UnifiedDownloader.cs)（WinForms）；[Windows 打包说明](windows/README.md)。
 - 第三方组件及版本：[THIRD_PARTY.txt](docs/THIRD_PARTY.txt)。
 - 发布前检查：[RELEASE_CHECKLIST.md](docs/RELEASE_CHECKLIST.md)。
 
