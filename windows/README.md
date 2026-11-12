@@ -4,6 +4,6 @@
 
 ## 维护者打包
 
-在 Windows 10/11 x64 上打开 PowerShell，进入仓库目录，运行 `powershell -ExecutionPolicy Bypass -File scripts/build-windows.ps1`。脚本使用系统 .NET Framework `csc.exe` 编译源文件，自动从官方发布页下载并校验 DouK 5.8、yt-dlp 与 FFmpeg，然后生成 `dist/VideoDownloader-Windows-x64.zip`。普通用户只需从 GitHub Releases 下载打包好的 ZIP，不需要运行脚本或安装环境。
+在 Windows 10/11 x64 上解压源码包并双击根目录的 `在Windows上打包.bat`；也可在 PowerShell 中运行 `powershell -ExecutionPolicy Bypass -File scripts/build-windows.ps1`。脚本使用系统 .NET Framework `csc.exe` 编译源文件，自动从官方发布页下载并校验 DouK 5.8、yt-dlp 与 FFmpeg，然后生成 `dist/VideoDownloader-Windows-x64.zip`。普通用户只需从 GitHub Releases 下载打包好的 ZIP，不需要运行脚本或安装环境。
 
 发布前必须在 Windows 上重新验证三个平台、取消、重试、打开文件/文件夹，以及音视频合并；检查 ZIP 不含 Cookie、DouK `Volume/`、个人下载记录和视频。源码本身不含用户 Cookie。
